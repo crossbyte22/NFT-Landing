@@ -1,0 +1,46 @@
+<div class="first">
+  @@include('./../../header.html', {})
+
+  <div class="container">
+    <div class="first__main">
+      <div class="first__item">
+        <h1 class="h1" data-aos="fade-right">Explore, Buy and Sell the <span class="">Best NFTs!</span></h1>
+        <div class="first__btns" data-aos="fade-right">
+          <button class="first__btn">Explore</button>
+          <button class="first__btn2">Create</button>
+        </div>
+        <div class="first__numbers" data-aos="fade-right">
+          @@include('first-number.html', { "title": "32k+", "description": "Artworks" })
+          @@include('first-number.html', { "title": "20k+", "description": "Auctions" })
+          @@include('first-number.html', { "title": "12k+", "description": "Creators" })
+        </div>
+      </div>
+
+      <div class="first__nft" data-aos="fade-up">
+        <div class="first-nft__header">
+          @@include('first-nft-header.html', { "title": "Current Bid", "numbers": "0.99 ETH" })
+          @@include('first-nft-header.html', { "title": "Ends in", "numbers": "25 hrs" })
+        </div>
+
+        <div class="first-nft__footer">
+          <div>
+            <p class="nft-footer__title">Artist</p>
+            <p class="nft-footer__nick">@wzard</p>
+          </div>
+
+          <button class="first-nft__btn">Start Bid</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="first__numbers first__numbers--fake" data-aos="fade-right">
+      @@include('first-number.html', { "title": "32k+", "description": "Artworks" })
+      @@include('first-number.html', { "title": "20k+", "description": "Auctions" })
+      @@include('first-number.html', { "title": "12k+", "description": "Creators" })
+    </div>
+  </div>
+
+  <a href="#companies" class="first__arrow-btn">
+    <img src="img/icons/icons.svg#arrow-down" alt="" />
+  </a href="#companies">
+</div>

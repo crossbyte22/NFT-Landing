@@ -137,7 +137,7 @@
   }
 }
 
-.first__numbers {
+.first-number{
   font-size: 24px;
   line-height: 35px;
   color: #9b9e9a;
@@ -204,20 +204,22 @@
   }
 }
 
-.nft-header__title {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.08em;
-  text-transform: capitalize;
-  font-family: "Oxanium";
-}
+.first-nft-header{
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.08em;
+    text-transform: capitalize;
+    font-family: "Oxanium";
+  }
 
-.nft-header__numbers {
-  font-family: "Oxanium";
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
+  &__numbers {
+    font-family: "Oxanium";
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 .first-nft__footer {
