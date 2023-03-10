@@ -1,0 +1,22 @@
+<div class="auctions">
+  <div class="container">
+    @@include('./../../components/title-h2.html', { "title": "Live Auctions", "color": "purple"})
+
+    <div class="swiper auctions-slider">
+      <div class="swiper-wrapper">
+        @@include('auctions-slide.html', {}) @@include('auctions-slide.html', {}) @@include('auctions-slide.html', {})
+        @@include('auctions-slide.html', {}) @@include('auctions-slide.html', {}) @@include('auctions-slide.html', {})
+      </div>
+
+      <div class="swiper-button-prev swiper-button-prev1">
+        <img src="img/icons/icons.svg#arrow-right" alt="arrow-right" />
+      </div>
+
+      <div class="swiper-button-next swiper-button-next1">
+        <img src="img/icons/icons.svg#arrow-right" alt="arrow-right" />
+      </div>
+    </div>
+
+    @@include('./../../components/button.html', {})
+  </div>
+</div>

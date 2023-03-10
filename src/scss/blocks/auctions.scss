@@ -184,28 +184,3 @@
     background: darken(rgba(233, 215, 167, 0.1), 60);
   }
 }
-
-.auctions_view-all {
-  margin: 84px auto 0;
-  padding: 24px 64px;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 35px;
-  /* identical to box height, or 118% */
-
-  letter-spacing: 0.05em;
-  border: 1px solid #ffce4e;
-  display: block;
-
-  transition: all 0.3s;
-
-  &:hover {
-    background: #ffce4e;
-  }
-
-  @media (max-width: 600px) {
-    padding: 13px 58px;
-    margin: 48px auto 0;
-    font-size: 18px;
-  }
-}

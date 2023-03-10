@@ -1,0 +1,32 @@
+.button {
+  margin: 84px auto 0;
+  padding: 24px 64px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  border: 1px solid #ffce4e;
+  display: block;
+
+  background: #ffce4e;
+
+  transition: 0.3s ease;
+
+  &:hover {
+    background: rgba(#ffce4e, 0);
+  }
+
+  @media (max-width: 600px) {
+    padding: 13px 58px;
+    margin: 48px auto 0;
+    font-size: 18px;
+  }
+}
+
+.button--secondary {
+  background: transparent;
+
+  &:hover {
+    background: #ffce4e;
+  }
+}

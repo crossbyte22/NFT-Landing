@@ -1,0 +1,37 @@
+<div class="popular">
+  <div class="container">
+    @@include('./../../components/title-h2.html', { "title": "Popular Collections", "color": "red"})
+  </div>
+
+  <div class="popular__main">
+    <div class="container">
+      <div class="swiper popular-slider">
+        <div class="swiper-wrapper">
+          @@include('popular-slide.html', {"img": "img/auctions/4.jpg"})
+          <!--  -->
+          @@include('popular-slide.html', {"img": "img/auctions/4.jpg"})
+          <!--  -->
+          @@include('popular-slide.html', {"img": "img/auctions/4.jpg"})
+          <!--  -->
+          @@include('popular-slide.html', {"img": "img/auctions/4.jpg"})
+          <!--  -->
+          @@include('popular-slide.html', {"img": "img/auctions/3.jpg"})
+          <!--  -->
+          @@include('popular-slide.html', {"img": "img/auctions/2.jpg"})
+          <!--  -->
+          @@include('popular-slide.html', {"img": "img/auctions/5.jpg"})
+        </div>
+
+        <div class="swiper-button-prev swiper-button-prev2">
+          <img src="img/icons/icons.svg#arrow-right" alt="arrow-right" />
+        </div>
+
+        <div class="swiper-button-next swiper-button-next2">
+          <img src="img/icons/icons.svg#arrow-right" alt="arrow-right" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./../../components/button.html', {})
+</div>

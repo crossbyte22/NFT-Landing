@@ -619,6 +619,36 @@ template {
   display: none;
 }
 
+.button {
+  margin: 84px auto 0;
+  padding: 24px 64px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  border: 1px solid #ffce4e;
+  display: block;
+  background: #ffce4e;
+  transition: 0.3s ease;
+}
+.button:hover {
+  background: rgba(255, 206, 78, 0);
+}
+@media (max-width: 600px) {
+  .button {
+    padding: 13px 58px;
+    margin: 48px auto 0;
+    font-size: 18px;
+  }
+}
+
+.button--secondary {
+  background: transparent;
+}
+.button--secondary:hover {
+  background: #ffce4e;
+}
+
 *,
 *:after,
 *:before {
@@ -2627,6 +2657,34 @@ button.swiper-pagination-bullet {
   position: relative;
   z-index: 2;
 }
+.first__arrow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(40px) translateY(50%);
+  background: rgba(109, 91, 114, 0.4);
+  box-shadow: 0px 14px 79px rgba(134, 19, 165, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+  width: 156px;
+  height: 156px;
+  z-index: 10;
+  transition: all 0.3s;
+}
+.first__arrow-btn img {
+  max-width: 50%;
+}
+.first__arrow-btn:hover {
+  background: rgba(55, 46, 57, 0.4);
+}
+@media (max-width: 850px) {
+  .first__arrow-btn {
+    display: none;
+  }
+}
 
 .first__main {
   display: flex;
@@ -2670,108 +2728,99 @@ button.swiper-pagination-bullet {
   }
 }
 
-.first__btns {
+.first-btns {
   display: flex;
   align-items: center;
   margin: 75px 0 120px;
   grid-gap: 48px;
 }
 @media (max-width: 1100px) {
-  .first__btns {
+  .first-btns {
     grid-gap: 15px;
   }
 }
 @media (max-width: 900px) {
-  .first__btns {
+  .first-btns {
     margin: 50px 0;
   }
 }
 @media (max-width: 850px) {
-  .first__btns {
+  .first-btns {
     justify-content: space-between;
     grid-gap: 20px;
   }
 }
-
-.first__btn,
-.first__btn2 {
+.first-btns__btn1, .first-btns__btn2 {
   padding: 24px 76px;
   font-weight: 600;
   font-size: 28px;
   line-height: 36px;
 }
 @media (max-width: 1100px) {
-  .first__btn,
-  .first__btn2 {
+  .first-btns__btn1, .first-btns__btn2 {
     padding: 15px 45px;
   }
 }
 @media (max-width: 900px) {
-  .first__btn,
-  .first__btn2 {
+  .first-btns__btn1, .first-btns__btn2 {
     padding: 15px 25px;
   }
 }
 @media (max-width: 850px) {
-  .first__btn,
-  .first__btn2 {
+  .first-btns__btn1, .first-btns__btn2 {
     flex-basis: 48%;
   }
 }
-
-.first__btn {
+.first-btns__btn1 {
   background: #FFCE4E;
   color: #000000;
   transition: all 0.3s;
 }
-.first__btn:hover {
+.first-btns__btn1:hover {
   color: #FFCE4E;
   background: rgba(0, 0, 0, 0);
 }
-
-.first__btn2 {
+.first-btns__btn2 {
   background: rgba(233, 215, 167, 0.1);
-  /* Primary color */
   border: 1px solid #ffce4e;
   transition: all 0.2s;
 }
-.first__btn2:hover {
+.first-btns__btn2:hover {
   -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
   -moz-box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
   box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
 }
 
-.first__numbers {
+.first-numbers {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.first__numbers--fake {
+.first-numbers--fake {
   display: none;
 }
 @media (max-width: 850px) {
-  .first__numbers--fake {
+  .first-numbers--fake {
     margin-top: 70px;
     display: flex;
   }
 }
 @media (max-width: 850px) {
-  .first__numbers {
+  .first-numbers {
     display: none;
   }
 }
-
-.first__numbers {
+.first-numbers__number {
   font-size: 24px;
   line-height: 35px;
   color: #9b9e9a;
 }
 @media (max-width: 1100px) {
-  .first__numbers {
+  .first-numbers__number {
     font-size: 20px;
   }
 }
-.first__numbers p {
+.first-numbers__number p {
   font-weight: 700;
   font-size: 62px;
   line-height: 78px;
@@ -2779,7 +2828,7 @@ button.swiper-pagination-bullet {
   font-family: "Oxanium";
 }
 @media (max-width: 1100px) {
-  .first__numbers p {
+  .first-numbers__number p {
     font-size: 40px;
   }
 }
@@ -2803,7 +2852,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-.first__nft {
+.first-nft {
   background: url("../img/nft-item.jpg");
   max-width: 550px;
   width: 100%;
@@ -2814,43 +2863,27 @@ button.swiper-pagination-bullet {
   padding-top: 25px;
 }
 @media (max-width: 1280px) {
-  .first__nft {
+  .first-nft {
     margin-left: 20px;
   }
 }
 @media (max-width: 1100px) {
-  .first__nft {
+  .first-nft {
     height: 550px;
   }
 }
 @media (max-width: 850px) {
-  .first__nft {
+  .first-nft {
     margin-left: 0;
   }
 }
 @media (max-width: 500px) {
-  .first__nft {
+  .first-nft {
     height: 380px;
   }
 }
 
-.nft-header__title {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.08em;
-  text-transform: capitalize;
-  font-family: "Oxanium";
-}
-
-.nft-header__numbers {
-  font-family: "Oxanium";
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-}
-
-.first-nft__footer {
+.first-nft-footer {
   width: 100%;
   background: #b5c8db;
   border-radius: 0px;
@@ -2860,17 +2893,26 @@ button.swiper-pagination-bullet {
   padding: 35px 50px;
 }
 @media (max-width: 1100px) {
-  .first-nft__footer {
+  .first-nft-footer {
     padding: 30px;
   }
 }
 @media (max-width: 500px) {
-  .first-nft__footer {
+  .first-nft-footer {
     padding: 15px;
   }
 }
-
-.nft-footer__title {
+.first-nft-footer__nick {
+  font-size: 24px;
+  line-height: 35px;
+  color: #594d5e;
+}
+@media (max-width: 500px) {
+  .first-nft-footer__nick {
+    font-size: 14px;
+  }
+}
+.first-nft-footer__title {
   font-weight: 600;
   font-size: 28px;
   /* identical to box height */
@@ -2880,23 +2922,11 @@ button.swiper-pagination-bullet {
   font-family: "Oxanium";
 }
 @media (max-width: 500px) {
-  .nft-footer__title {
+  .first-nft-footer__title {
     font-size: 18px;
   }
 }
-
-.nft-footer__nick {
-  font-size: 24px;
-  line-height: 35px;
-  color: #594d5e;
-}
-@media (max-width: 500px) {
-  .nft-footer__nick {
-    font-size: 14px;
-  }
-}
-
-.first-nft__btn {
+.first-nft-footer__btn {
   background: #ffce4e;
   backdrop-filter: blur(22.5px);
   padding: 23px 45px;
@@ -2906,48 +2936,34 @@ button.swiper-pagination-bullet {
   color: #000000;
   transition: all 0.3s;
 }
-.first-nft__btn:hover {
+.first-nft-footer__btn:hover {
   color: #FFCE4E;
   background: #000;
 }
 @media (max-width: 500px) {
-  .first-nft__btn {
+  .first-nft-footer__btn {
     padding: 8px 23px;
     font-size: 16px;
   }
 }
 
-.first__item {
-  max-width: 700px;
+.first-nft-header__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.08em;
+  text-transform: capitalize;
+  font-family: "Oxanium";
+}
+.first-nft-header__numbers {
+  font-family: "Oxanium";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
 }
 
-.first__arrow-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(40px) translateY(50%);
-  background: rgba(109, 91, 114, 0.4);
-  box-shadow: 0px 14px 79px rgba(134, 19, 165, 0.1);
-  backdrop-filter: blur(20px);
-  border-radius: 50%;
-  width: 156px;
-  height: 156px;
-  z-index: 10;
-  transition: all 0.3s;
-}
-.first__arrow-btn img {
-  max-width: 50%;
-}
-.first__arrow-btn:hover {
-  background: rgba(55, 46, 57, 0.4);
-}
-@media (max-width: 850px) {
-  .first__arrow-btn {
-    display: none;
-  }
+.first__item {
+  max-width: 700px;
 }
 
 .companies__main {
@@ -3148,29 +3164,6 @@ button.swiper-pagination-bullet {
 }
 .auctions__btn:hover {
   background: rgba(75, 60, 19, 0.1);
-}
-
-.auctions_view-all {
-  margin: 84px auto 0;
-  padding: 24px 64px;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 35px;
-  /* identical to box height, or 118% */
-  letter-spacing: 0.05em;
-  border: 1px solid #ffce4e;
-  display: block;
-  transition: all 0.3s;
-}
-.auctions_view-all:hover {
-  background: #ffce4e;
-}
-@media (max-width: 600px) {
-  .auctions_view-all {
-    padding: 13px 58px;
-    margin: 48px auto 0;
-    font-size: 18px;
-  }
 }
 
 .how__title {
