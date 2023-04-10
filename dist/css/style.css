@@ -2791,36 +2791,37 @@ button.swiper-pagination-bullet {
   box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
 }
 
-.first-numbers {
+.first-numbers-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.first-numbers--fake {
+@media (max-width: 850px) {
+  .first-numbers-wrapper {
+    display: none;
+  }
+}
+.first-numbers-wrapper--fake {
   display: none;
 }
 @media (max-width: 850px) {
-  .first-numbers--fake {
+  .first-numbers-wrapper--fake {
     margin-top: 70px;
     display: flex;
   }
 }
-@media (max-width: 850px) {
-  .first-numbers {
-    display: none;
-  }
-}
-.first-numbers__number {
+
+.first-number {
   font-size: 24px;
   line-height: 35px;
   color: #9b9e9a;
 }
 @media (max-width: 1100px) {
-  .first-numbers__number {
+  .first-number {
     font-size: 20px;
   }
 }
-.first-numbers__number p {
+.first-number p {
   font-weight: 700;
   font-size: 62px;
   line-height: 78px;
@@ -2828,7 +2829,7 @@ button.swiper-pagination-bullet {
   font-family: "Oxanium";
 }
 @media (max-width: 1100px) {
-  .first-numbers__number p {
+  .first-number p {
     font-size: 40px;
   }
 }
@@ -2966,6 +2967,15 @@ button.swiper-pagination-bullet {
   max-width: 700px;
 }
 
+.companies {
+  margin-top: 250px 0 160px;
+}
+@media (max-width: 850px) {
+  .companies {
+    margin: 75px 0 45px;
+  }
+}
+
 .companies__main {
   display: flex;
   align-items: center;
@@ -2982,25 +2992,40 @@ button.swiper-pagination-bullet {
   }
 }
 
-.companies {
-  margin-top: 250px 0 160px;
+.auctions {
+  overflow: hidden;
+  padding-bottom: 88px;
+  background-image: url("../img/auctions-effect.png");
+  background-repeat: no-repeat;
+  background-position: 0 -50px;
 }
-@media (max-width: 850px) {
-  .companies {
-    margin: 75px 0 45px;
+
+@media (max-width: 600px) {
+  .swiper-wrapper {
+    grid-gap: 45px 0;
   }
 }
 
-.auctions__img {
+.main-slide__item {
+  background: #3d2942;
+  padding: 32px;
+}
+@media (max-width: 900px) {
+  .main-slide__item {
+    padding: 20px 15px;
+  }
+}
+
+.main-slide__img {
   position: relative;
 }
-.auctions__img img {
+.main-slide__img img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   display: block;
 }
-.auctions__img div {
+.main-slide__img div {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3018,41 +3043,24 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.02em;
 }
 @media (max-width: 1300px) {
-  .auctions__img div {
+  .main-slide__img div {
     font-size: 18px;
     padding: 10px 25px;
   }
 }
 
-.auctions {
-  overflow: hidden;
-  padding-bottom: 88px;
-  background-image: url("../img/auctions-effect.png");
-  background-repeat: no-repeat;
-  background-position: 0 -50px;
+.main-slide__profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 28px 0;
 }
 
-.auctions__item {
-  background: #3d2942;
-  padding: 32px;
-}
-@media (max-width: 900px) {
-  .auctions__item {
-    padding: 20px 15px;
-  }
-}
-
-@media (max-width: 600px) {
-  .swiper-wrapper {
-    grid-gap: 45px 0;
-  }
-}
-
-.auctions-profile__guy {
+.main-slide__profile-guy {
   display: flex;
   align-items: center;
 }
-.auctions-profile__guy img {
+.main-slide__profile-guy img {
   display: block;
   border-radius: 50%;
   overflow: hidden;
@@ -3061,13 +3069,13 @@ button.swiper-pagination-bullet {
   height: 64px;
 }
 @media (max-width: 800px) {
-  .auctions-profile__guy img {
+  .main-slide__profile-guy img {
     width: 40px;
     height: 40px;
   }
 }
 
-.auctions-profile__owner {
+.main-slide__profile-owner {
   font-weight: 500;
   font-size: 28px;
   line-height: 35px;
@@ -3075,12 +3083,12 @@ button.swiper-pagination-bullet {
   color: #f5fbf2;
 }
 @media (max-width: 1300px) {
-  .auctions-profile__owner {
+  .main-slide__profile-owner {
     font-size: 20px;
   }
 }
 
-.auctions-profile__nick {
+.main-slide__profile-nick {
   font-size: 20px;
   line-height: 35px;
   /* or 177% */
@@ -3089,66 +3097,62 @@ button.swiper-pagination-bullet {
   color: #bdaac1;
 }
 
-.auctions-profile__likes {
+.main-slide__profile-likes {
   display: flex;
   align-items: center;
 }
-.auctions-profile__likes img {
+.main-slide__profile-likes img {
   width: 25px;
 }
-.auctions-profile__likes span {
+@media (max-width: 700px) {
+  .main-slide__profile-likes img {
+    width: 15px;
+  }
+}
+
+.main-slide__likes-count {
   font-size: 32px;
   line-height: 35px;
   /* identical to box height, or 111% */
   color: #76607a;
 }
 @media (max-width: 700px) {
-  .auctions-profile__likes img {
-    width: 15px;
-  }
-  .auctions-profile__likes span {
+  .main-slide__likes-count {
     font-size: 20px;
   }
 }
 
-.auctions-bid__title {
+.main-slide__bid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-slide__bid-title {
   font-size: 24px;
   line-height: 35px;
   /* identical to box height, or 148% */
   color: #c6bfc8;
 }
 @media (max-width: 700px) {
-  .auctions-bid__title {
+  .main-slide__bid-title {
     font-size: 18px;
   }
 }
 
-.auctions-bid__price {
+.main-slide__bid-price {
   font-family: "Oxanium";
   font-weight: 700;
   font-size: 24px;
   line-height: 35px;
 }
 @media (max-width: 700px) {
-  .auctions-bid__price {
+  .main-slide__bid-price {
     font-size: 18px;
   }
 }
 
-.auctions__profile {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 28px 0;
-}
-
-.auctions__bid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.auctions__btn {
+.main-slide__btn {
   display: block;
   background: rgba(233, 215, 167, 0.1);
   border: 1px solid #fde8b3;
@@ -3162,8 +3166,16 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.05em;
   transition: all 0.2s;
 }
-.auctions__btn:hover {
+.main-slide__btn:hover {
   background: rgba(75, 60, 19, 0.1);
+}
+
+.how {
+  padding-top: 185px;
+  background-image: url("../img/how-effect.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 0;
 }
 
 .how__title {
@@ -3177,69 +3189,6 @@ button.swiper-pagination-bullet {
 @media (max-width: 600px) {
   .how__title {
     font-size: 30px;
-  }
-}
-
-.how {
-  padding-top: 185px;
-  background-image: url("../img/how-effect.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50% 0;
-}
-
-.how__icon {
-  background: #372839;
-  border-radius: 50%;
-  width: 106px;
-  height: 106px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 32px;
-  position: relative;
-}
-.how__icon img {
-  max-width: 60%;
-}
-.how__icon:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -50%;
-  transform: translateY(-50%) translateX(100%);
-  background: url("../img/how-elem.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 165px;
-  height: 10px;
-}
-@media (max-width: 1200px) {
-  .how__icon:after {
-    right: -30%;
-    width: 100px;
-  }
-}
-@media (max-width: 500px) {
-  .how__icon:after {
-    top: 100%;
-    transform: translateX(-100%) translateY(100%) rotate(90deg);
-    height: 80px;
-    width: 80px;
-  }
-}
-
-.how-item__title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: capitalize;
-  /* Primary color */
-  color: #ffce4e;
-}
-@media (max-width: 700px) {
-  .how-item__title {
-    font-size: 18px;
   }
 }
 
@@ -3261,25 +3210,80 @@ button.swiper-pagination-bullet {
   }
 }
 
-.how__item {
+.how-item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.how__item:last-child .how__icon:after {
+.how-item:last-child .how-item__icon:after {
   display: none;
 }
 @media (max-width: 1000px) {
-  .how__item {
+  .how-item {
     flex-basis: 49%;
   }
-  .how__item:nth-child(2) .how__icon:after {
+  .how-item:nth-child(2) .how-item__icon:after {
     display: none;
   }
 }
 @media (max-width: 500px) {
-  .how__item:nth-child(2) .how__icon:after {
+  .how-item:nth-child(2) .how-item__icon:after {
     display: block;
+  }
+}
+
+.how-item__icon {
+  background: #372839;
+  border-radius: 50%;
+  width: 106px;
+  height: 106px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  position: relative;
+}
+.how-item__icon img {
+  max-width: 60%;
+}
+.how-item__icon:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  transform: translateY(-50%) translateX(100%);
+  background: url("../img/how-elem.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 165px;
+  height: 10px;
+}
+@media (max-width: 1200px) {
+  .how-item__icon:after {
+    right: -30%;
+    width: 100px;
+  }
+}
+@media (max-width: 500px) {
+  .how-item__icon:after {
+    top: 100%;
+    transform: translateX(-100%) translateY(100%) rotate(90deg);
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.how-item__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: capitalize;
+  /* Primary color */
+  color: #ffce4e;
+}
+@media (max-width: 700px) {
+  .how-item__title {
+    font-size: 18px;
   }
 }
 
@@ -3289,29 +3293,6 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0 -50px;
-}
-.popular .auctions__img img {
-  max-height: 270px;
-}
-.popular .auctions-profile__nick {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 36px;
-  color: #f5fbf2;
-}
-@media (max-width: 900px) {
-  .popular .auctions-profile__nick {
-    font-size: 17px;
-  }
-}
-.popular .auctions-profile__likes span {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 35px;
-  color: #c2b5c6;
-}
-.popular .auctions__profile {
-  margin-bottom: 0;
 }
 
 .popular__main {
@@ -3355,15 +3336,15 @@ button.swiper-pagination-bullet {
   pointer-events: none;
 }
 
-.categories-slider {
-  padding-top: 0 !important;
-}
-
 .categories {
   margin-top: 105px;
 }
 
-.auctions__img:after {
+.categories-slider {
+  padding-top: 0 !important;
+}
+
+.main-slide__img:after {
   content: "";
   position: absolute;
   top: 0;
@@ -3374,15 +3355,15 @@ button.swiper-pagination-bullet {
   opacity: 0;
   transition: all 0.3s;
 }
-.auctions__img:hover:after {
+.main-slide__img:hover:after {
   opacity: 1;
 }
-.auctions__img:hover button {
+.main-slide__img:hover button {
   opacity: 1;
   pointer-events: all;
 }
-.auctions__img button {
-  background: #FFCE4E;
+.main-slide__img button {
+  background: #ffce4e;
   backdrop-filter: blur(22.5px);
   font-weight: 600;
   font-size: 24px;
@@ -3400,7 +3381,7 @@ button.swiper-pagination-bullet {
   white-space: nowrap;
   transition: all 0.3s;
 }
-.auctions__img button:hover {
+.main-slide__img button:hover {
   -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
   -moz-box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);
   box-shadow: 0px 0px 15px 5px rgba(255, 206, 78, 0.35);

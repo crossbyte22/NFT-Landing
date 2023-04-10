@@ -5,36 +5,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0 -50px;
-
-  .auctions__img {
-    img {
-      max-height: 270px;
-    }
-  }
-
-  .auctions-profile__nick {
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 36px;
-    color: #f5fbf2;
-
-    @media (max-width: 900px) {
-      font-size: 17px;
-    }
-  }
-
-  .auctions-profile__likes {
-    span {
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 35px;
-      color: #c2b5c6;
-    }
-  }
-
-  .auctions__profile {
-    margin-bottom: 0;
-  }
 }
 
 .popular__main {
